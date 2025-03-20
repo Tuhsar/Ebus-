@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Bus Info</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock head %}
+
+{% block body %}
+
+<br></br>
+<h1>Search Results</span></h1>
+<form  >
+    <div class="form-outline mb-4"><center>
+
+        <br/>
+        {% if condition %}
+        <table class="table">
+            <thead class='thead-light' >
+              <tr>
+                <th scope="col">Sl.no</th>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+                <th scope="col">Day</th>
+                <th scope="col">Time</th>
+                <th scope="col">Type</th>
+                <th scope="col">Contact</th>
+              </tr>
+            </thead>
+            <tbody>
+{% for i in details %}
+              <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{i['info'][0]}}</td>
+                <td>{{i['info'][1]}}</td>
+                <td>{{i['info'][2]}}</td>
+                <td>{{i['info'][3]}}</td>
+                <td>{{i['type']}}</td>
+                <td>{{i['contact']}}</td>
+              </tr>
+{% endfor %}
+            </tbody>
+          </table>
+          {% else %}
+          <text>{{msg}}</text>
+          <text>{{source}} and {{destination}}</text>
+          {% endif %}
+</center></div>
+  </form>
+  <button onclick="history.back()" style="padding: 1vh 5vw" class="btn btn-secondary  mb-4">Go Back</button>
+<div>
+<a  href='/'>Logout</a>
+</div>
+
+{% endblock body %}

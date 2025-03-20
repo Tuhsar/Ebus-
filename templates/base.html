@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang='en'>
+    <head>
+        <link href="../static/favicon.ico" rel="icon" type="image/x-icon">
+        <link rel='stylesheet' href='{{url_for('static', filename='css/style.css')}}'>
+         {% block head %}
+         {% endblock head %}
+
+      
+    </head>
+<body>
+<div class='container'>
+    {% block body %}
+    {% endblock body %}
+</div>
+</body>
+</html>

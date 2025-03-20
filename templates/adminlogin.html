@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Admin Login</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock head %}
+
+{% block body %}
+
+<br></br>
+<h1>Admin Login</h2>
+    <text style="color: red;">{{msg}}</text>
+<form action='/admin' , method='post' >
+    <div class="form-outline mb-4"><center>
+      <label class="form-label" for="form2Example1">Login</label>
+        <input name="ID" class="form-control" placeholder="Enter Your Adimin ID" requiredtype="text" id="form2Example1"/>
+        <label class="form-label" for="form2Example1">Password</label>
+        <input name="Password" type='password'class="form-control" placeholder="Enter Your Password" requiredtype="password" id="form2Example1"/></center>
+    </div>
+  
+   
+    <!-- Submit button -->
+    <button type="Submit" style="padding: 1vh 5vw" class="btn btn-secondary  mb-4">Login</button>
+  </form>
+
+
+
+{% endblock body %}

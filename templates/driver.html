@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Driver Post info</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock head %}
+
+{% block body %}
+
+<br></br>
+<h1>Post bus Information</span></h1>
+<h3 style='color: gray;'>{{msg}}</h3>
+<form action='/postbusinfo/{{driverid}}' , method='post' >
+    <div class="form-outline mb-4"><center>
+
+        <br/>
+        <label class='form lable'for="bus-source">Source :</label> 
+        <div>
+            <select name="source" id="bus-source"> 
+            {% for i in citynames %}
+            <option value="{{i}}">{{i}}</option>
+            {% endfor %}
+            </select></div>
+           
+        <label class='form lable'for="bus-dest">Destination :</label> 
+        <div>
+            <select name="destination" id="bus-dest"> 
+            {% for j in citynames %}
+            <option value="{{j}}">{{j}}</option>
+            {% endfor %}
+            </select></div>
+            
+            <label class='form lable'for="bus-day">Day :</label> 
+        <div>
+            <select name="day" id="bus-day"> 
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+            <option value="Every Day" selected>Every Day</option>
+            </select></div>
+
+
+            <label class='form lable'for="bus-time">Timing :</label> 
+            <div>
+                <input style='width: 25%;' type="time" id="bus-time" name="time" required/>
+                </div>
+
+
+        <label class='form lable'for="bus-names">Bus Type :</label>   
+        <div>
+        <select name="bus-type" id="bus-names"> 
+        <option value="General">General</option> 
+        <option value="Sleeper">Sleeper</option> 
+        <option value="AC Sleeper">AC Sleeper</option></select></div>
+    
+        <div>
+            <label class="form-label" for="form2Example3">Contact</label>
+            <input name="contact" style='width: 25%;' class="form-control" placeholder="Contact :"  pattern="[0-9]{10,10}" type="tel" id="form2Example3" required/>
+        </div>
+
+</center></div>
+  
+    <!-- Submit button -->
+    <button type="Submit" style="padding: 1vh 5vw" class="btn btn-secondary  mb-4">Add Details</button>
+  </form>
+<a href='/'>Logout</a>
+
+
+{% endblock body %}

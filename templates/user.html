@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>SearchBus</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock head %}
+
+{% block body %}
+
+<br></br>
+<h1>Search Bus</span></h1>
+<text>{{msg}}</text>
+<form action='/busdetails' , method='post' >
+    <div class="form-outline mb-4"><center>
+
+        <br/>
+        <label class='form lable'for="bus-source">Source :</label> 
+        <div>
+            <select name="source" id="bus-source"> 
+            {% for i in citynames %}
+            <option value="{{i}}">{{i}}</option>
+            {% endfor %}
+            </select></div>
+           
+        <label class='form lable'for="bus-dest">Destination :</label> 
+        <div>
+            <select name="destination" id="bus-dest"> 
+            {% for j in citynames %}
+            <option value="{{j}}">{{j}}</option>
+            {% endfor %}
+            </select></div>
+
+</center></div>
+  
+    <!-- Submit button -->
+    <button type="Submit" style="padding: 1vh 5vw" class="btn btn-secondary  mb-4">Search</button>
+  </form>
+<a href='/'>Logout</a>
+
+
+{% endblock body %}

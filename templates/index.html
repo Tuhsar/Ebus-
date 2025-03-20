@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>E-BUS</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock head %}
+
+
+
+{% block body %}
+<br></br>
+<h1>Welcome to E-Bus</h1><center>{{msg}}</center>
+<br/>
+<div>
+<a type="button" href ="adminlogin"class="btn btn-warning">Admin</a>
+</div>
+<br/>
+<div>
+<a type="button" href="userlogin" class="btn btn-info">User Login</a>
+</div>
+<br/>
+<div>
+<a type="button" href="driverlogin"class="btn btn-success">Driver</a>
+</div>
+<br/>
+</form>
+  <a href='/registration'>Register as User</a>
+  
+{% endblock body %}

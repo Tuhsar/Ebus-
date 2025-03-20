@@ -1,0 +1,74 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+    background-color: #f1f1f1;
+  }
+  .container{
+    text-align: center;
+    margin: 100 auto;
+   
+  }
+  
+  input.form-control{
+    width:50%;
+  }
+  
+  h1{
+    color: white;
+    text-shadow: 2px 2px #1c87c9;;
+  }
+  
+  body .container{
+    background-image: url('../ebusbg.jpg');
+    margin: 30px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  label{
+    color: white;
+    font-style: italic;
+  }
+  
+
+  button.btn:hover{
+    background: rgb(255, 188, 20);
+    color: white;
+  }
+  
+  .container a:hover {
+    background: rgba(231, 225, 237, 0.973);
+    color: rgb(0, 0, 0);
+  }
+  
+  center p{
+    width: 600px;
+    background: yellow;
+  
+  }
+  
+  .container h3.title{
+  color: violet;
+  }
+
+  .container div a {
+    width: 200px;
+  }
+
+  .container select {
+    color: rgb(140, 104, 104);
+    background-color: whitesmoke;
+    width: 25%;
+    min-height: 30px;
+    height: 7vh;
+  }
+
+table.table{
+  color: orange;
+  text-shadow: 0.5px 0.1px #f1f1f1;
+  background-color: gray;
+}
